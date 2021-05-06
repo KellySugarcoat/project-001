@@ -1,18 +1,16 @@
 const express = require('express');
 const app = express();
 const portser = 3333;
-
+const path = require('path');
 //Server
-app.listen(portser, () => {
-    console.log('Server on', portser);
-})
+var public = path.join(__dirname, 'assets/');
+
 
 //template engine
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-app.use(express.static("/assets"));
-
+app.use('/assets', express.static(public));
 //app.get('/', (req, res) =>{
 //    console.log('New request')
 //    res.set('Content-Type', 'text/html');
@@ -21,4 +19,9 @@ app.use(express.static("/assets"));
 
 app.get('/', (req, res) => {
     res.render("index")
+})
+
+app.listen(portser, () => {
+    console.log('Server son', portser);
+    console.log(public)
 })
