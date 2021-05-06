@@ -1,20 +1,24 @@
 const express = require('express');
 const app = express();
-const portser = 80;
-const path = require('path');
+const portser = 3333;
 
-
-
-//set 
-app.set('views', path.join(__dirname + '/../assets', 'views'))
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
-app.use('/assets', express.static('assets'));
+//Server
 app.listen(portser, () => {
     console.log('Server on', portser);
 })
 
-app.get('/', (req, res) =>{
-res.render('index.html');
-//res.render('index', path.join(__dirname + '/../index.html'));
+//template engine
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
+app.use(express.static("/assets"));
+
+//app.get('/', (req, res) =>{
+//    console.log('New request')
+//    res.set('Content-Type', 'text/html');
+//    res.send(JSON.stringify('me gustas mucho'));
+//})
+
+app.get('/', (req, res) => {
+    res.render("index")
 })
