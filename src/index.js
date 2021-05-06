@@ -10,5 +10,6 @@ app.listen(portser, () => {
 })
 
 app.get('/', (req, res) =>{
-    res.send('hi uwu')
+    res.set('Content-Type', 'text/html');
+    res.send(JSON.stringify('me gustas mucho'));
 })
