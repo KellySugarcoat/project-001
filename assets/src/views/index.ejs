@@ -1,31 +1,28 @@
-<%- include('./components/header.ejs'); %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+</head>
 <body>
-    <section></section>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="#" style="font-family: Arbutus, cursive;">DragonClub</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/cantida">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pricing">Precios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/nosotros">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contactanos">Contactanos</a></li>
-                </ul>
-            </div>
-            <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-                <div class="container"><a class="navbar-brand logo" href="#" style="font-family: 'Averia Gruesa Libre', cursive;">Dragonclub Studios<br></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-2">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link active" href="index">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cantida">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros">Sobre Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contactanos">Contactanos</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </nav>
+    <%- include('./components/navbar') %>
     <section id="fks" class="clean-block clean-hero" style="color: rgba(9,162,255,0.04);background: url(&quot;assets/img/fondos/Portada2.png&quot;);background-size: cover;margin: auto;height: 448px;">
         <div id="bottom" class="text">
             <h2>Toda la comunidad conectada.</h2>
@@ -170,11 +167,7 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer dark">
-        <div class="footer-copyright">
-            <p>© 2021 Copyright Text</p>
-        </div>
-    </footer>
+    <%- include('./components/footer') %>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>

@@ -21,6 +21,14 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
+app.get("/index", (req, res) => {
+    res.render("index")
+});
+
+app.get("/galeria", (req, res) => {
+    res.render("galeria")
+});
+
 app.get("/cantida", (req, res) => {
     res.render("cantida")
 });

@@ -23,31 +23,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="#" style="font-family: Arbutus, cursive;">DragonClub</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cantida.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Precios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>
-                </ul>
-            </div>
-            <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-                <div class="container"><a class="navbar-brand logo" href="#" style="font-family: 'Averia Gruesa Libre', cursive;">Dragonclub Studios<br></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-2">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="cantida.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </nav>
+    <%- include('./components/navbar') %>
     <main class="page">
         <section class="clean-block features">
             <div class="container">
@@ -87,11 +63,7 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer dark">
-        <div class="footer-copyright">
-            <p>© 2021 Dragonclub Studios</p>
-        </div>
-    </footer>
+    <%- include('./components/footer') %>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
