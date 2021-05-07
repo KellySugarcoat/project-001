@@ -21,10 +21,21 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
-app.get("/views", (req, res) => {
+app.get("/cantida", (req, res) => {
     res.render("cantida")
 });
 
+app.get("/contactanos", (req, res) => {
+    res.render("contactanos")
+});
+
+app.get("/loginams", (req, res) => {
+    res.render("loginams")
+});
+
+app.get("/nosotros", (req, res) => {
+    res.render("nosotros")
+});
 //PASANDO DATOS A UNA VISTA
 
 //datos de prueba
