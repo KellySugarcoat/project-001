@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
+app.get("/views", (req, res) => {
+    res.render("cantida")
+});
+
 //PASANDO DATOS A UNA VISTA
 
 //datos de prueba
