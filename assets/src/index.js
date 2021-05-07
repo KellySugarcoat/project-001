@@ -21,6 +21,20 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
+//PASANDO DATOS A UNA VISTA
+
+//datos de prueba
+const userFromDatabase = {
+    isLoggedIn: true,
+    name: 'Catalina',
+    lastname: 'Fernandez',
+    age: 18,
+    isMarried: true,
+    hobbies: ['Pasar tiempo con el uwu', 'LOL', 'stress']
+}
+
+app.get('/test', (req, res) => res.render('TestView', { user: userFromDatabase }))
+
 app.listen(portser, () => {
     console.log('Server son', portser);
     console.log(public)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Prueba de pasar datos a la vista
+    <%if (user.isLoggedIn) { %>
+        EL USUARIO ESTA LOGEADO
+    <%} else { %>
+        EL USUARIO NO ESTA LOGEADO
+    <% } %>
+
+
+    <p><b>Nombre: </b> <%= user.name  %></p>
+    <p><b>Apellido: </b> <%= user.lastname  %></p>
+    <p><b>Edad: </b> <%= user.age  %></p>
+    <br>
+    <b>Hobbies:</b>
+    <br>
+    <ul>
+        <% user.hobbies.forEach(hobbie => { %>
+            <li>
+                <%= hobbie %>
+            </li>
+        <% }) %>
+    </ul>
+    <pre>Como podes ver estoy englobando todo el LI dentro de un ciclo FOR para que directamente cree un nuevo li</pre>
+</body>
+</html>
