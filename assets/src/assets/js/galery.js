@@ -13,10 +13,10 @@ const testGalery = [
     },
 ]
 
-testGalery.forEach(function(image) {
-    var img = document.createElement('img');
-    img.src = image;
-    });
+//testGalery.forEach(function(image) {
+//    var img = document.createElement('img');
+//    img.src = image;
+//    });
 
 
 module.exports= testGalery
