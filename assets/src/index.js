@@ -59,7 +59,9 @@ const userFromDatabase = {
 const testGalery = require('./assets/js/galery')
 
 app.get('/test', (req, res) => res.render('TestView', { user: userFromDatabase }))
-
+app.get('/gallery', function(request, response) {
+    response.render('Gallery', {images: testGalery})
+})
 app.listen(portser, () => {
     console.log('Server son', portser);
     console.log(public)
