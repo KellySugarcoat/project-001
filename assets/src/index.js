@@ -26,7 +26,7 @@ app.get("/index", (req, res) => {
 });
 
 app.get("/galeria", (req, res) => {
-    res.render("galeria")
+    res.render('galeria', {images: testGallery})
 });
 
 app.get("/cantida", (req, res) => {
@@ -56,11 +56,11 @@ const userFromDatabase = {
     hobbies: ['Pasar tiempo con el uwu', 'LOL', 'stress']
 }
 
-const testGalery = require('./assets/js/galery')
+const testGallery = require('./assets/js/Gallery')
 
 app.get('/test', (req, res) => res.render('TestView', { user: userFromDatabase }))
-app.get('/gallery', function(request, response) {
-    response.render('Gallery', {images: testGalery})
+app.get('/Gallery', function(request, response) {
+    response.render('Gallery', {images: testGallery})
 })
 app.listen(portser, () => {
     console.log('Server son', portser);
