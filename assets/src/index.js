@@ -11,11 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.use('/assets', express.static(public));
-//app.get('/', (req, res) =>{
-//    console.log('New request')
-//    res.set('Content-Type', 'text/html');
-//    res.send(JSON.stringify('me gustas mucho'));
-//})
+
 
 app.get('/', (req, res) => {
     res.render("index")
@@ -23,10 +19,6 @@ app.get('/', (req, res) => {
 
 app.get("/index", (req, res) => {
     res.render("index")
-});
-
-app.get("/galeria", (req, res) => {
-    res.render('galeria', {images: testGallery})
 });
 
 app.get("/cantida", (req, res) => {
@@ -44,8 +36,19 @@ app.get("/loginams", (req, res) => {
 app.get("/nosotros", (req, res) => {
     res.render("nosotros")
 });
-//PASANDO DATOS A UNA VISTA
 
+//pivot render
+app.get("/galeria", (req, res) => {
+    res.render('galeria', {images: testGallery})
+});
+
+app.get("/market", (req, res) => {
+    res.render('market', {imag: testmerch})
+});
+
+app.get("/vids", (req, res) => {
+    res.render('vids', {videos: testVidGallery})
+});
 //datos de prueba
 const userFromDatabase = {
     isLoggedIn: true,
@@ -55,8 +58,40 @@ const userFromDatabase = {
     isMarried: true,
     hobbies: ['Pasar tiempo con el uwu', 'LOL', 'stress']
 }
+//-----------------------------------
+//img gallery array -predatabase
+const testGallery = [
+    {
+        desc: 'IRELIA ES REINA',
+        pic: 'https://i.pinimg.com/originals/2c/36/d1/2c36d1ab84a3d178a7de6e7789f5b727.jpg'
+    },
+    {
+        desc: 'TEEMO ES CUTE',
+        pic: 'https://esports.as.com/2018/05/01/league-of-legends/Beemo-Pulso-Fuego-League-Legends_1131796817_70275_1024x576.jpg'
+    },
+    {
+        desc: 'mh ah mh mh uh ah',
+        pic: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg'
+    },
+]
 
-const testGallery = require('./assets/js/Gallery')
+//vid array -predata base
+const testVidGallery = [
+    {
+        descrip: 'Caution! this video is a demo of the code',
+        vid: 'https://www.youtube.com/watch?v=wfH_76IUvBc',
+    },
+]
+
+//merch array -predatabase
+
+const testmerch = [
+    {
+        obj:'https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80',
+        des:'Lorem ipsum at dolore',
+        price:'USD:999',
+    },
+]
 
 app.get('/test', (req, res) => res.render('TestView', { user: userFromDatabase }))
 app.get('/Gallery', function(request, response) {

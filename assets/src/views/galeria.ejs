@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/inicio.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
-    <link rel="stylesheet" href="assets/css/smoothproducts.css">
-    <title>Galeria</title>
-</head>
+<%- include('./components/gallhead') %>
 <body class="flex">
     <div class="flex flex-col">
     <%- include('./components/navbar') %>
+        <div>
+            <%- include('./components/gallnav') %>
+        </div>
         <div class="flex w-full h-screen bg-white flex-wrap overflow-y-auto">
+            <div class="w-full h-10"></div>
             <% images.forEach(function(image){ %>
             <div class="flex flex-col ml-28 mt-28 bg-gray-200 h-3/6 w-1/4 shadow-2xl">
                 <div class="h-5/6 w-full bg-gray-500 ">
