@@ -1,0 +1,35 @@
+<%- include('./components/gallhead') %>
+<body class="flex flex-col h-screen w-screen">
+    <%- include('./components/navbar') %>
+    <%- include('./components/gallnav') %>
+    <div class="flex h-full w-full bg-gray-300">
+        <div class="flex mt-36 ml-36 bg-gradient-to-tl from-gray-300 via-gray-200 to-gray-100 h-5/6 w-2/6 shadow-lg rounded-lg">
+            <form id="Add-Gall" class="flex flex-col">
+                <h1 class="text-black font-semibold mt-10 ml-56">ImgPost</h1>
+                <input id="Title" type="text" placeholder="Enter Title" class="ml-28 mt-5 h-10">
+                <input id="Desc" type="text" placeholder="Enter Description" class="ml-28 mt-5 h-10">
+                <input id="date" type="text" placeholder="Enter Date" class="ml-28 mt-5 h-10">
+                <input id="image" type="file" placeholder="img" class="ml-28 mt-5">
+                <button id="button" class="ml-56 mt-36 w-36 py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-red-600 hover:bg-red-800">
+                Add post
+                </button>
+            </form>
+        </div>
+        <div id="preview" class="bg-blue-500 ml-20 mt-36 w-3/6 h-5/6">
+            <table>
+                <thread>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>imagen</th>
+                    </tr>
+                </thread>
+            </table>
+        </div>
+    </div>
+    <script>
+    </script>
+    <%- include('./components/footer') %>
+</body>
+</html>

@@ -9,14 +9,19 @@
             <div class="w-full h-10"></div>
             <% images.forEach(function(image){ %>
             <div class="flex flex-col ml-28 mt-28 bg-gray-200 h-3/6 w-1/4 shadow-2xl">
-                <div class="h-5/6 w-full bg-gray-500 ">
+                <div class="h-4/6 w-full bg-gray-500 ">
                     <img class="object-cover h-full w-full" src="<%= image.pic %>">
                 </div>
-                <p class="m-14 mt-12 font-bold text-lg overflow-ellipsis"><%= image.desc %></p>
+                <div class="flex flex-col items-stretch">
+                    <h1 class="ml-4 mt-2 font-bold text-2xl"><%= image.title %></h1>
+                    <div class="self-center h-20 w-4/5">
+                        <p class="break-words font-semibold text-sm"><%= image.desc %></p>
+                    </div>
+                    <h3 class="self-end mr-2 text-xs"><%= image.date %></h3>
+                </div>
             </div>
             <% }) %>
         </div>
     <%- include('./components/footer') %>
 </body>
-
 </html>
