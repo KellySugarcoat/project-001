@@ -4,7 +4,7 @@ const portser = 3333;
 const path = require('path');
 //Server
 var public = path.join(__dirname, 'assets/');
-
+const fileUpload = require('express-fileupload');
 
 //template engine
 app.set('view engine', 'ejs');
@@ -12,6 +12,7 @@ app.set('views', __dirname + '/views');
 
 app.use('/assets', express.static(public));
 
+app.use(fileUpload());
 
 app.get('/', (req, res) => {
     res.render("index")
@@ -86,7 +87,7 @@ const testGallery = [
     },
 ]
 
-//vid array -predata base
+//vid array -predatabase
 const testVidGallery = [
     {
         descrip: 'Caution! this video is a demo of the code',
@@ -112,3 +113,25 @@ app.listen(portser, () => {
     console.log('Server son', portser);
     console.log(public)
 })
+
+//UploadFunction
+app.post('', (req, res) => {
+    let SumbitFile;
+    let uploadPath;
+
+    if(!req.files|| Object.keys(req.files).length    === 0){
+        return res.status(400).send('No files were uploaded');
+    }
+    //name of the input is SumbitFile
+    SumbitFile = req.files.SumbitFile;
+    uploadPath= __dirname + '/img/Uploads/'
+    console.log(SumbitFile);
+
+    //mv place the file on the server
+    SumbitFile.mv(uploadPath, function(err) {
+        if(err) return res.status(500).send(err);
+    
+    res.send('Upload Succes!');
+    
+    });
+});
